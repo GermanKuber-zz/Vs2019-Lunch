@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "Demo.Vs2019Lunch.sln",
+    "projects": [
+      "Demo.Vs2019Lunch\\Demo.Vs2019Lunch.csproj"
+    ]
+  }
+}
