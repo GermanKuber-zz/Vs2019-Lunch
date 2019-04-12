@@ -12,7 +12,7 @@
             Data = new OtherDataDemo(key * key + 2);
         }
 
-        public void ChangeValue(string newValue) =>
-            Value = newValue;
+        public void ChangeValue(string value) =>
+            Value = value;
     }
 }
