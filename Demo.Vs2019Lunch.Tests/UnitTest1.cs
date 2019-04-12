@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace Demo.Vs2019Lunch.Tests
 {
@@ -6,9 +7,20 @@ namespace Demo.Vs2019Lunch.Tests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Success_test()
         {
-            Assert.AreEqual(true, true);
+            var dataGenerator = new DataGenerator();
+            var list = dataGenerator.Generate(9);
+            Assert.AreEqual(list.Count, 9);
+        }
+        [TestMethod]
+        public void Fail_test()
+        {
+            var dataGenerator = new DataGenerator();
+
+            var list = dataGenerator.Generate(9);
+            list.First().Value = "Test Change";
+            Assert.AreEqual(list.Count, 15);
         }
     }
 }

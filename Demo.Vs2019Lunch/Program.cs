@@ -13,9 +13,10 @@ namespace Demo.Vs2019Lunch
         {
             var result = new DataGenerator().Generate(50);
 
+
             result.ForEach(dataDemo =>
             {
-                Console.WriteLine($"Ingrese el nuevo valor para {dataDemo.Key}");
+                  Console.WriteLine($"Ingrese el nuevo valor para {dataDemo.Key} - {dataDemo.Value}");
                 dataDemo.ChangeValue(Console.ReadLine());
             });
         }
