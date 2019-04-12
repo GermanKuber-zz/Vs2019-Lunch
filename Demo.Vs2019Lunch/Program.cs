@@ -6,6 +6,11 @@ namespace Demo.Vs2019Lunch
     {
         static void Main(string[] args)
         {
+            WriteMain();
+        }
+
+        private static void WriteMain()
+        {
             var result = new DataGenerator().Generate(50);
 
             result.ForEach(dataDemo =>
